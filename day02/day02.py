@@ -28,7 +28,6 @@ with open('raw.txt') as file:
     for noun in range(0, 99):
         for ver in range(0, 99):
             result = do_the_operation(raw, noun, ver)
-            #print(noun, ver)
             if(result == 19690720):
                 print((100 * noun) + ver)
                 break

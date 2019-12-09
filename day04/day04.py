@@ -1,5 +1,6 @@
 from collections import Counter
 
+
 def check_valid_password(y):
     x = str(y)
     condition_1 = len(x) == 6
@@ -8,15 +9,16 @@ def check_valid_password(y):
 
     return(condition_1 and condition_2 and condition_3)
 
-assert check_valid_password(111111) == True
-assert check_valid_password(223450) == False
-assert check_valid_password(122345) == True
-assert check_valid_password(111111) == True
 
-print(sum([check_valid_password(x) for x in range(153517,630395,1)]))
+assert check_valid_password(111111) is True
+assert check_valid_password(223450) is False
+assert check_valid_password(122345) is True
+assert check_valid_password(111111) is True
+
+print(sum([check_valid_password(x) for x in range(153517, 630395, 1)]))
 
 
-### problem 2
+# problem 2
 def check_valid_password2(y):
     x = str(y)
     condition_1 = len(x) == 6
@@ -26,8 +28,9 @@ def check_valid_password2(y):
 
     return(condition_1 and condition_2 and condition_3)
 
-assert check_valid_password2(112233) == True
-assert check_valid_password2(111122) == True
-assert check_valid_password2(123444) == False
 
-print(sum([check_valid_password2(x) for x in range(153517,630395,1)]))
+assert check_valid_password2(112233) is True
+assert check_valid_password2(111122) is True
+assert check_valid_password2(123444) is False
+
+print(sum([check_valid_password2(x) for x in range(153517, 630395, 1)]))
