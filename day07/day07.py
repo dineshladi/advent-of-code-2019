@@ -29,7 +29,6 @@ def runProgram(RAW, user_input):
             data[data[idx+3]] = value_1 * value_2
             idx = idx + 4
         elif op_code == 3:
-            value = data[data[idx+1]] if param1 == 0 else data[idx+1]
             input_value = user_input[0]
             user_input = user_input[1:]
             data[data[idx+1]] = input_value
@@ -76,7 +75,7 @@ def runProgram(RAW, user_input):
     return(output)
 
 
-def execute_amplifiier(Input, phase, signal):
+def execute_amplifier(Input, phase, signal):
     output = runProgram(Input, [phase, signal[0]])
     return(output)
 
@@ -84,7 +83,7 @@ def execute_amplifiier(Input, phase, signal):
 def runAmplifiers(Input, PhaseSettings):
     final_output = [0]
     for phase in PhaseSettings:
-        final_output = execute_amplifiier(Input, phase, final_output)
+        final_output = execute_amplifier(Input, phase, final_output)
     return(final_output)
 
 
